@@ -1,0 +1,41 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/corelight/corelight-client
+docs: https://github.com/corelight/corelight-client#access-and-authentication
+summary:
+  types:
+  - http
+  http_schemes:
+  - basic
+  mfa: true
+  notes: >-
+    No public OpenAPI is published for the Corelight Sensor API (device-local,
+    account-gated). This profile is searched from the official corelight-client
+    documentation.
+schemes:
+- name: basicAuth
+  type: http
+  scheme: basic
+  description: >-
+    HTTP Basic authentication against the Corelight Sensor. Two device API users
+    exist: admin (unlimited access) and monitor (read-only access). API access
+    must first be enabled through the device configuration interface and
+    passwords set for both users.
+  sources:
+  - https://github.com/corelight/corelight-client
+- name: fleetMfa
+  type: http
+  scheme: basic
+  mfa: totp
+  description: >-
+    Authentication against a Corelight Fleet Manager additionally accepts a 2FA
+    verification code (--mfa). Credentials are cached in
+    ~/.corelight-client/credentials after first use.
+  sources:
+  - https://github.com/corelight/corelight-client
+transport_security:
+  tls: required
+  custom_ca: supported
+  notes: >-
+    Client validates the device SSL certificate by default; a custom CA cert may
+    be supplied, and verification can be relaxed for lab devices.
