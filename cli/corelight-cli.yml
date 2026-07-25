@@ -1,0 +1,68 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/corelight/corelight-client
+name: corelight-client
+description: >-
+  Official open-source (BSD) command-line client for the Corelight Sensor RESTful
+  API. Configures and controls a Corelight Sensor or Fleet Manager remotely. The
+  command surface is discovered dynamically from the connected device once
+  authenticated, so the available commands reflect the device's API.
+binary: corelight-client
+package: packages/corelight-packages.yml
+requirements:
+  python: '>=3.4'
+  dependencies:
+  - requests
+install:
+- method: pip
+  command: pip3 install corelight-client
+- method: source
+  command: git clone https://github.com/corelight/corelight-client && cd corelight-client && python3 setup.py install
+usage: 'corelight-client [<global options>] <command> <subcommand> [<options>]'
+device_targeting:
+  description: The target Corelight Sensor address can be set three ways.
+  options:
+  - flag: -b <address> / --device <address>
+  - config_file: '~/.corelight-client.rc with device=<address>'
+  - env: CORELIGHT_DEVICE=<address>
+authentication:
+  model: http-basic
+  users:
+  - name: admin
+    access: unlimited
+  - name: monitor
+    access: read-only
+  mfa: >-
+    2FA verification code supported for authentication against a Corelight Fleet
+    Manager (--mfa)
+  credential_cache: '~/.corelight-client/credentials'
+global_options:
+- flag: --async
+  description: Do not wait for asynchronous commands to complete before exiting.
+- flag: --device
+  description: Network address of a Corelight Sensor device.
+- flag: --fleet
+  description: Network address of a Corelight Fleet Manager.
+- flag: --uid
+  description: UID of a Corelight Sensor managed through a Fleet Manager.
+- flag: --cache
+  description: Custom file for caching Corelight Sensor meta data.
+- flag: --debug
+  description: Enable debugging output showing HTTP requests and replies.
+- flag: --password
+  description: Password for authentication.
+- flag: --mfa
+  description: 2FA verification code for Fleet Manager authentication.
+- flag: --ssl-ca-cert
+  description: File containing a custom SSL CA certificate for device validation.
+- flag: --ssl-no-verify-certificate
+  description: Accept any Corelight Sensor SSL certificate.
+- flag: --ssl-no-verify-hostname
+  description: Accept the device certificate even if the hostname does not match.
+- flag: --socket
+  description: Use a unix domain socket for sending requests.
+commands:
+  note: >-
+    corelight-client discovers the full command/subcommand set from the device's
+    RESTful API after authenticating; --help lists commands only once connected.
+    Commands follow the form "<command> <subcommand> [options]".

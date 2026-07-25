@@ -1,0 +1,24 @@
+generated: '2026-07-18'
+method: searched
+source: https://corelight.com/trust-and-compliance
+standards:
+- id: fedramp
+  conforms: true
+  status: In Process
+  impact_level: Moderate
+  evidence: FedRAMP Marketplace listing FR2621342703 (In Process, Moderate)
+  source: https://marketplace.fedramp.gov/products/FR2621342703/
+- id: gdpr
+  conforms: true
+  evidence: DPA with Standard Contractual Clauses, DTIA guide, published subprocessor list
+  source: https://corelight.com/trust-and-compliance
+- id: tls1.3
+  conforms: true
+  evidence: www.corelight.com negotiates TLSv1.3 (domain-security probe)
+  source: security/corelight-domain-security.yml
+- id: oauth2
+  conforms: false
+  evidence: Sensor API uses HTTP Basic auth (admin/monitor users); no OAuth2 documented
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: no public OpenAPI available to assert problem+json responses

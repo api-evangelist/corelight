@@ -1,0 +1,36 @@
+generated: '2026-07-18'
+method: searched
+probe: true
+url: https://corelight.com/trust-and-compliance
+description: >-
+  Corelight publishes a Trust & Compliance center with a self-service portal for
+  requesting audit reports and viewing monitored controls in real time. Select
+  Corelight products are described as independently audited and certified to
+  industry-leading compliance standards; specific certificates are released
+  through the self-service portal rather than named on the public page.
+certifications:
+- name: FedRAMP
+  status: In Process
+  impact_level: Moderate
+  source: https://marketplace.fedramp.gov/products/FR2621342703/
+- name: GDPR
+  status: compliant
+  source: https://corelight.com/trust-and-compliance
+privacy:
+  dpa: true
+  standard_contractual_clauses: true
+  data_transfer_impact_assessment: true
+  subprocessors: https://corelight.com/legal/subprocessors
+  privacy_policy: https://corelight.com/legal/privacy
+evidence:
+- source: https://corelight.com/trust-and-compliance
+  keywords:
+  - trust & compliance
+  - independently audited and certified
+  - data processing addendum
+  - subprocessors
+- source: https://marketplace.fedramp.gov/products/FR2621342703/
+  keywords:
+  - fedramp
+  - in process
+  - moderate

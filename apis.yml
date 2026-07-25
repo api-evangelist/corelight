@@ -1,8 +1,16 @@
 aid: corelight
 name: Corelight
-description: 'Corelight is a company surfaced as a portfolio company of accel, general-catalyst and added
-  to the API Evangelist network as a stub for enrichment. Sector: cybersecurity. This profile is a lead
-  awaiting the enrichment pipeline.'
+description: >-
+  Corelight is a network detection and response (NDR) company founded by the
+  creators of the open-source Zeek (formerly Bro) network security monitor. Its
+  Open NDR Platform transforms network traffic into high-fidelity security
+  evidence — logs, alerts, and metadata — powering threat detection, hunting,
+  investigation, and incident response across on-premises and cloud
+  environments. Corelight Sensors expose a comprehensive RESTful API for remote
+  configuration and control, driven by the open-source corelight-client
+  command-line client, with a Fleet Manager for centralized fleet management.
+  Backed by Accel and General Catalyst, Corelight is listed on the FedRAMP
+  Marketplace (In Process, Moderate).
 url: https://raw.githubusercontent.com/api-evangelist/corelight/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,18 +19,99 @@ x-backed-by:
 - general-catalyst
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
+image: https://corelight.com/hubfs/images/thumbs/Corelight_LinkShare_Thumbnail_V2.png
 tags:
 - Company
 - Cybersecurity
-apis: []
+- Network Detection and Response
+- NDR
+- Network Security
+- Threat Detection
+- Zeek
+- Incident Response
+- Security
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- name: Corelight Sensor API
+  description: >-
+    RESTful API for remotely configuring and controlling a Corelight Sensor and
+    Fleet Manager. Device-local and account-gated (no public OpenAPI); driven by
+    the official open-source corelight-client CLI. Authentication is HTTP Basic
+    with admin (unlimited) and monitor (read-only) users, plus 2FA when using a
+    Fleet Manager.
+  humanURL: https://github.com/corelight/corelight-client
+  baseURL: https://docs.corelight.com
+  tags:
+  - NDR
+  - Network Security
+  - Sensor
+  properties:
+  - type: CLI
+    url: cli/corelight-cli.yml
+  - type: Authentication
+    url: authentication/corelight-authentication.yml
 common:
 - type: Website
   url: http://www.corelight.com
+- type: DeveloperPortal
+  url: https://github.com/corelight/corelight-client
+- type: Documentation
+  url: https://corelight.com/support/training
+- type: GitHubOrganization
+  url: https://github.com/corelight
+- type: Blog
+  url: https://corelight.com/blog
+- type: Support
+  url: https://corelight.com/support/
+- type: Pricing
+  url: https://corelight.com/products/open-ndr
+- type: TermsOfService
+  url: https://corelight.com/terms-of-use/
+- type: PrivacyPolicy
+  url: https://corelight.com/legal/privacy
+- type: Packages
+  url: packages/corelight-packages.yml
+- type: SDKs
+  url: packages/corelight-packages.yml
+- type: CLI
+  url: cli/corelight-cli.yml
+- type: Authentication
+  url: authentication/corelight-authentication.yml
+- type: DomainSecurity
+  url: security/corelight-domain-security.yml
+- type: VulnerabilityDisclosure
+  url: security/corelight-vulnerability-disclosure.yml
+- type: Security
+  url: https://corelight.com/support/security
+- type: TrustCenter
+  url: security/corelight-trust-center.yml
+- type: Compliance
+  url: https://corelight.com/trust-and-compliance
+- type: Conformance
+  url: conformance/corelight-conformance.yml
+- type: LLMsTxt
+  url: llms/corelight-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
