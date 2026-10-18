@@ -51,6 +51,15 @@ tags:
 - Company
 - Cybersecurity
 - Network Detection and Response
+- Network Security
+- Threat Detection
+- Zeek
+- Incident Response
+- Security
+tags_raw:
+- Company
+- Cybersecurity
+- Network Detection and Response
 - NDR
 - Network Security
 - Threat Detection
@@ -73,6 +82,10 @@ apis:
   humanURL: https://github.com/corelight/corelight-client
   baseURL: https://docs.corelight.com
   tags:
+  - Network Detection and Response
+  - Network Security
+  - Sensor
+  tags_raw:
   - NDR
   - Network Security
   - Sensor
