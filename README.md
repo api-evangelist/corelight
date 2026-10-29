@@ -64,6 +64,95 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Corelight is a company surfaced as a portfolio company of accel, general-catalyst and added to the API Evangelist network as a stub for enrichment. Sector: cybersecurity. This profile is a lead awaiting the enrichment pipeline.
+Corelight is a network detection and response (NDR) company founded by the creators of the open-source Zeek (formerly Bro) network security monitor. Its Open NDR Platform transforms network traffic into high-fidelity security evidence — logs, alerts, and metadata — powering threat detection, hunting, investigation, and incident response across on-premises and cloud environments. Corelight Sensors expose a comprehensive RESTful API for remote configuration and control, driven by the open-source corelight-client command-line client, with a Fleet Manager for centralized fleet management. Backed by Accel and General Catalyst, Corelight is listed on the FedRAMP Marketplace (In Process, Moderate).
 
-Backed by: accel, general-catalyst — http://www.corelight.com
+**Areas:** Company · Cybersecurity · Network Detection and Response · NDR · Network Security · Threat Detection · Zeek · Incident Response · Security
+
+## Corelight on APIs.io
+
+Everything profiled for Corelight is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/corelight/](https://apis.io/providers/corelight/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Corelight Sensor API](https://apis.io/apis/corelight/corelight-sensor-api/) — RESTful API for remotely configuring and controlling a Corelight Sensor and Fleet Manager. Device-local and account-gated (no public OpenAPI); driven by the…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Corelight Authentication](https://apis.io/security/corelight/corelight-authentication/)
+- [Corelight Domain Security](https://apis.io/security/corelight/corelight-domain-security/)
+- [Corelight Trust Center](https://apis.io/security/corelight/corelight-trust-center/)
+- [Corelight Vulnerability Disclosure](https://apis.io/security/corelight/corelight-vulnerability-disclosure/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](http://www.corelight.com)
+- [Documentation](https://corelight.com/support/training)
+- [Pricing](https://corelight.com/products/open-ndr)
+- [Support](https://corelight.com/support/)
+- [Blog](https://corelight.com/blog)
+- [Security](https://corelight.com/support/security)
+- [Compliance](https://corelight.com/trust-and-compliance)
+- [Terms of service](https://corelight.com/terms-of-use/)
+- [Privacy policy](https://corelight.com/legal/privacy)
+- [GitHub](https://github.com/corelight)
+
+## API Evangelist rating
+
+**Kin Score 34.2** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 13.2 |
+| Developer ergonomics | 52.4 |
+| Access clarity | 47.4 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 35.3** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/corelight/](https://apis.io/providers/corelight/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Corelight: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/corelight/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
